@@ -1,14 +1,14 @@
 @media (max-width: 25em) {
   #main-title img {
-    width: 5rem;
+    width: 7rem;
   }
   .main-header button {
-    padding: 0.4rem 0.6rem;
-    font-size: 0.7rem;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
   }
   .main-header button span {
-    width: 1rem;
-    height: 1rem;
+    width: 1.3rem;
+    height: 1.3rem;
   }
 
   #modal {
@@ -19,5 +19,9 @@
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     animation: fade-slide-in-from-top 0.3s ease-in-out;
+  }
+
+  #products {
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
   }
 }
