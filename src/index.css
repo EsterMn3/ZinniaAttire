@@ -28,7 +28,6 @@ body {
   transition: 0.3s eace-in-out;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  padding: 0.4rem 9%;
 }
 
 #main-title {
@@ -158,9 +157,9 @@ h1 {
 }
 
 #modal {
-  max-width: 20rem;
+  max-width: 30rem;
   width: 100%;
-  background: #f9ccac;
+  background: rgb(247, 192, 200);
   border: none;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -192,7 +191,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
-  background: #fcbaa0;
+  background: rgb(228, 177, 185);
   border-radius: 5px;
   color: black;
   font-size: 0.9rem;
@@ -247,7 +246,7 @@ h1 {
 }
 
 #modal form button:last-of-type {
-  background: #271e07;
+  background: #2e0c2c;
   border: none;
   border-radius: 5px;
   padding: 0.5rem 1rem;

@@ -2,6 +2,9 @@
   #main-title img {
     width: 7rem;
   }
+  .main-header {
+    padding: 0.4rem 9%;
+  }
   .main-header button {
     padding: 0.3rem 0.8rem;
     font-size: 1rem;
@@ -16,11 +19,6 @@
   #modal {
     max-width: 20rem;
     width: 100%;
-    background: #f9ccac;
-    border: none;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    animation: fade-slide-in-from-top 0.3s ease-in-out;
   }
 
   #products {
