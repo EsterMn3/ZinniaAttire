@@ -3,12 +3,14 @@
     width: 7rem;
   }
   .main-header button {
-    padding: 0.6rem 0.8rem;
+    padding: 0.3rem 0.8rem;
     font-size: 1rem;
   }
   .main-header button span {
     width: 1.3rem;
     height: 1.3rem;
+    top: -25%;
+    right: -12px;
   }
 
   #modal {
