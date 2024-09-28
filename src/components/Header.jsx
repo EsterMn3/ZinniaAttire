@@ -1,4 +1,4 @@
-import { useRef, useContext } from "react";
+import { useState, useRef, useContext } from "react";
 import logo from "../assets/logo.webp";
 import CartModal from "./CartModal.jsx";
 import { CartContext } from "../store/shopping-cart-context.jsx";
@@ -8,6 +8,17 @@ export default function Header() {
   const { items } = useContext(CartContext);
 
   const cartQuantity = items.length;
+
+  const [fixedHeader, setFixedHeader] = useState(false);
+
+  function handlingFixedHeader() {
+    if (window.scrollY >= 5) {
+      //header height plus hero section
+      setFixedHeader(true);
+    } else {
+      setFixedHeader(false);
+    }
+  }
 
   function handleOpenCartClick() {
     modal.current.open();
@@ -24,18 +35,20 @@ export default function Header() {
     );
   }
 
+  window.addEventListener("scroll", handlingFixedHeader);
   return (
     <>
       <CartModal ref={modal} title="Your Cart" actions={modalActions} />
-      <header id="main-header">
+      <header
+        className={fixedHeader ? " main-header sticky-header " : "main-header"}
+      >
         <div id="main-title">
           <img src={logo} alt="Zinnia Attire" />
         </div>
-        <p>
-          <button onClick={handleOpenCartClick}>
-            Cart <span>{cartQuantity}</span>
-          </button>
-        </p>
+
+        <button onClick={handleOpenCartClick}>
+          Cart <span>{cartQuantity}</span>
+        </button>
       </header>
     </>
   );

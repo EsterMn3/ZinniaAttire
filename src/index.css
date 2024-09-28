@@ -13,15 +13,21 @@ body {
   min-height: 100vh;
 }
 
-#main-header {
+.main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.3rem 15%;
+  padding: 0.4rem 15%;
   background: rgb(255, 239, 242);
 
   position: sticky;
   top: 0;
+}
+.sticky-header {
+  background: #fff;
+  transition: 0.3s eace-in-out;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 #main-title {
@@ -44,7 +50,7 @@ h1 {
   margin: 0;
 }
 
-#main-header button {
+.main-header button {
   background: #e0876a;
   border: none;
   display: flex;
@@ -58,11 +64,11 @@ h1 {
   position: relative;
 }
 
-#main-header button:hover {
+.main-header button:hover {
   background: #f4a688;
 }
 
-#main-header button span {
+.main-header button span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,7 +157,8 @@ h1 {
 }
 
 #modal {
-  width: 30%;
+  max-width: 20rem;
+  width: 100%;
   background: #f9ccac;
   border: none;
   border-radius: 6px;
